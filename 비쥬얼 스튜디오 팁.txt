@@ -1,0 +1,54 @@
+Auto Rename Tag
+Better C++ Syntax
+Bracket Pair Color DLW
+Bracket Pair Colorization Toggler
+C/C++
+C/C++ Extension Pack
+C/C++ Runner
+C/C++ Themes
+CMake
+CMake Tools
+CodeLLDB
+CSS Peek
+Doxygen Documentation Generator
+HTML CSS Support
+HTML to CSS autocompletion
+indent-rainbow
+IntelliSense for CSS class names in HTML
+Path Intellisense
+Prettier - Code formatter
+TabOut
+
+
+
+alt + 방향키 : 방향키로 이동하기
+ctrl + n(숫자) : 분할 화면 (숫자) 보기
+shift + alt + 위,아래 화살표 : 위,아래로 복사
+ctrl + k + f : 자동정렬
+ctrl + d : 문자열 한번에 수정
+alt + 클릭 : 다양한 문자열 골라 수정
+ctrl + alt + 화살표 : 화살표 라인 수정
+ctrl + tab 위에 파일 선택 가능
+
+하위 요소 생성: “>” 사용
+/* 예: */
+header>ul>li
+
+동급 요소 생성: “+” 사용
+/* 예: */
+section>article>h2+p
+
+반복 태그 생성: “*” 사용
+/* 예: */
+ul>li*5
+
+CSS class 와 id 설정: “.” 와 “#”사용
+/* 예: */
+ul#menu>li.item*3
+
+Grouping (그룹화) : “( )” 사용
+.container>(header>nav>ul>li*5>a)+(#content>section)+footer
+
+넘버링(숫자를 순서대로 나열): “$”사용
+/* 예: */
+ul.list>li.item$*5>{$}
