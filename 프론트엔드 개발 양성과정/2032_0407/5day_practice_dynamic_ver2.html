@@ -6,19 +6,24 @@
         <meta http-equiv="X-UA-Compatible" content = "ie=edge">
         <title> 학교폭력 </title>
         <style>
-            *{
+            /* *{
                 margin: 0;
                 padding: 0;
-            }
+            } */
+            /* 이거 하면 로고가 아래로 내려가는 이유??? 나중에 확인 */
 
-            @media(max-width:400px) { /*모바일*/
+
+            @media(max-width:400px){ /*모바일*/
                     /*상단*/
-                div.header { width: 400px; height: 50px; background-color: rgb(57, 112, 57)  }
-                    nav.box1{ float: left; width: 60px; height: 50px; background-color: antiquewhite}
-                    nav.box2{ float: right; width: 60px; height: 50px; background-color: antiquewhite}
-                    nav.box3{ float: right; width: 60px; height: 50px; background-color: antiquewhite}
-                    nav.box4{ float: right; width: 60px; height: 50px; background-color: antiquewhite}
-                    nav.box5{ float: right; width: 60px; height: 50px; background-color: antiquewhite}
+                header { width: 400px; height: 100px; background-color: rgb(57, 112, 57)  }
+                    h1{margin-left: 40px; float: left;}
+                    nav{float: right; margin-right: 20px;border: 1px solid firebrick; }
+                    ul li{ list-style: none; float: left;}
+                    ul li a{display: block; padding: 5px 10px; background-color: aquamarine}
+                    /* ul에 float: 하면 안되네?; */
+
+                    
+
                     /* 본문 */
                 div.contents{width: 400px; height: 1500px;  }
                 div.main1 { width: 400px; height: 500px; background-color: darkcyan}
@@ -37,7 +42,7 @@
 
             @media(min-width:401px) and (max-width:1079px)  { /*태블릿pc*/
                     /*상단*/
-                div.header { width: 100%; height: 50px; background-color: rgb(57, 112, 57)  }
+                .header { width: 100%; height: 50px; background-color: rgb(57, 112, 57)  }
                     nav.box1{ float: left; width: 14.96259351620948%; height: 50px; background-color: antiquewhite}
                     nav.box2{ float: right; width: 14.96259351620948%; height: 50px; background-color: antiquewhite}
                     nav.box3{ float: right; width: 14.96259351620948%; height: 50px; background-color: antiquewhite}
@@ -61,26 +66,28 @@
 
             @media(min-width:1080px) { /*데스크탑*/
                 /*상단*/
-                div.header { width: 1080px; height: 50px; background-color: darkseagreen  }
-                    nav.box1{ float: left; width: 100px; height: 50px; background-color: antiquewhite}
-                    nav.box2{ float: right; width: 100px; height: 50px; background-color: antiquewhite}
-                    nav.box3{ float: right; width: 100px; height: 50px; background-color: antiquewhite}
-                    nav.box4{ float: right; width: 100px; height: 50px; background-color: antiquewhite}
-                    nav.box5{ float: right; width: 100px; height: 50px; background-color: antiquewhite}
+                header {  width: 100%; height: 100px; background-color: rgb(168, 168, 168)  }
+                h1{ float: left; margin-left: 50px;}
+                nav{ float: right; margin-right: 100px; margin-top: 20px; border: 0px solid green }
+                ul li {list-style: none; float: left; width: 100px; background-color: aquamarine ;}
+                ul li a{ display: block; padding: 5px; width: 100px; text-align: center; background-color: antiquewhite; text-decoration: none; font-size: 12px; font-weight: bold;}
+                ul li a:hover{background-color: aquamarine; color: #ffffff; }
+
+
                 /*본문*/  
-                div.contents{width: 1080px; height: 500px; }
+                div.contents{width: 100%; height: 500px; }
                 /* border:3px solid black*/
                 div.main1 { float: left; width: 300px; height: 500px; background-color: darkcyan}
                     div.pic{margin-left: 20px; width: 150px; height: 150px; background-color: gold}
                     div.text{ margin-left: 20px; background-color: antiquewhite}
-                div.main2 { float: left; width: 580px; height: 500px; background-color: aqua}
+                div.main2 { float: left; width: 53%; height: 500px; background-color: aqua}
                     div.pic1{width: 400px; height: 500px; }
                 div.main3 { float: left; width: 200px; height: 500px; background-color: rgb(206, 86, 86)}
                     div.pic2{margin-left: 20px; width: 150px; height: 150px; background-color: black}
                     div.text3{ margin-left: 20px; background-color: antiquewhite}   
                 /*하단*/
-                div.under1 { width: 1080px; height: 200px; background-color: aquamarine }
-                div.under2 { width: 1080px; height: 200px; background-color: firebrick}
+                div.under1 { width: 100%; height: 200px; background-color: aquamarine }
+                div.under2 { width: 100%; height: 200px; background-color: firebrick}
             /*;이거는 마지막에 사용해도 되고 안해도 되고*/               
             }
 
@@ -88,15 +95,17 @@
     </head>
     
     <body>
-        division 나누다
-        <div class="header">
-            <nav class="box1">로고</nav>
-            <nav class="box2">상단1</nav> 
-            <nav class="box3">상단2</nav> 
-            <nav class="box4">상단3</nav> 
-            <nav class="box5">상단4</nav> 
-        </div>
-        
+        <header>
+            <h1>로고</h1>
+            <nav>
+                <ul>
+                    <li><a href="http://"> 상단1</a> </li> 
+                    <li><a href="http://"> 상단2</a> </li> 
+                    <li><a href="http://"> 상단3</a> </li> 
+                    <li><a href="http://"> 상단4</a> </li> 
+                </ul>
+            </nav>
+        </header>
         <div class="contents">
             <div class="main1">
                 <p>본문1</p>
