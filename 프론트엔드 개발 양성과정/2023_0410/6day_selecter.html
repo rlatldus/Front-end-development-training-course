@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        /* 선택자(selecter) : 정보를 담아둔 태그를 지정한다는 의미 */
+        /* 태그선택자*/
+            div {border: 5px solid firebrick;}
+        /* 하위선택자*/
+            div p{}
+        /* 자식선택자*/
+            div p>a{font-size: 200%;}
+        /* 형제선택자*/
+            div p{background-color: aqua;}
+        /* 그룹선택자*/
+            div,p,a{font-size: 50%;}
+        /* 클래스선택자*/
+            div.box {background-color: antiquewhite;}
+        /* 아이디선택자  */
+            div #box{}
+
+        /* 가상클래스선택자 : a 태그에 여러 동작들이 들어감 순서가 중요함 */
+            ul li a:link{color: aliceblue;} /*?? 때*/
+            ul li a:visited{color: rgb(31, 150, 255);} /*방문했을 때*/
+            ul li a:hover{color: aliceblue;} /*갖다될 때*/
+            ul li a:active{color: rgb(71, 97, 120);} /*누를 때*/
+            ul li a:focus{border: 4px dotted darkblue; color: rgb(31, 150, 255);} /*tap키 사용해서*/
+        /* 가상요소선택자 : 가상의 요소를 만들어서 선택한다는 의미*/
+        /* content가 없으면 안보임 */
+            p.money::before {display: block; content: ""; border: 1px solid rgb(150, 62, 170); width: 100px; height: 100px; background-image: url("coin.png");background-size:100px 100px; }
+            p.money::after {display: block; content: ""; border: 1px solid rgb(150, 62, 170); width: 100px; height: 100px; background-image: url("coin.png");background-size: 100%; }
+        /* 속성선택자*/
+            a[title] {border: 4px solid gold;}
+    </style>
+</head>
+
+<body>
+<h1>프런트엔드개발</h1>
+<div id="box" class="box" > 
+    <p class="p1"><a href="http://www.w3c.org" target="_blank" title=" 안녕">웹</a>표준</p>
+    <p class="p2">웹접근성</p>
+    <p class="money">s</p>
+</div>
+</body>
+
+</html>

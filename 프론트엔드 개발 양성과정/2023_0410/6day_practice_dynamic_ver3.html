@@ -18,11 +18,12 @@
                 header { width: 400px; height: 100px; background-color: rgb(57, 112, 57)  }
                     h1{display: block; margin-left: 40px; width: 100px; padding: 30px 0 30px; float: left;  }
                     nav{float: right;  padding: 30px 0 30px ;  display: block; width: 250px; height: 40px;  }
-                    ul li{ list-style: none; float: left; background-color: azure;}
-                    ul li a{display: block; padding: 10px; }
+                    ul#mainMenu>li{width: 60px; float: left; list-style: none; float: left; background-color: azure; }
+                    ul#mainMenu>li>a{display: block; padding: 10px; text-decoration: none; }
                     /* ul에 float: 하면 안되네?; */
-
-                    
+                    ul#mainMenu>li>a:hover{background-color: aquamarine;}
+                    ul.subMenu>li{list-style: none; font-size: 12px; text-align: center; padding: 5px 0 5px; width: 60px; height: 280px; position: absolute;}
+                    ul.subMenu>li>a{list-style: none; text-decoration: none;}
 
                     /* 본문 */
                 div.contents{width: 400px; height: 1500px;  }
@@ -69,9 +70,16 @@
                 header {  width: 100%; height: 100px; background-color: rgb(168, 168, 168)  }
                 h1{ float: left; margin: 28px;}
                 nav{ float: right; margin-right: 100px; margin-top: 20px; border: 0px solid green }
-                ul li {list-style: none; float: left; width: 100px; background-color: aquamarine ;}
-                ul li a{ display: block; padding: 5px; width: 100px; text-align: center; background-color: antiquewhite; text-decoration: none; font-size: 12px; font-weight: bold;}
-                ul li a:hover{background-color: aquamarine; color: #ffffff; }
+                ul#mainMenu>li:hover ul.subMenu { height: 60px; }
+                ul#mainMenu>li:hover a.v{background-color: aquamarine; color: #ffffff;}
+                ul#mainMenu>li {list-style: none; float: left; width: 100px; background-color: aquamarine ; position: relative;}
+                ul#mainMenu>li>a{ display: block; padding: 5px; width: 100px; text-align: center; background-color: antiquewhite; text-decoration: none; font-size: 12px; font-weight: bold;}
+                ul#mainMenu>li>a:hover{background-color: aquamarine; color: #ffffff; }
+                ul.subMenu{text-align: center; font-size: 12px; width: 100px; height: 0; overflow: hidden; position: absolute; background-color: antiquewhite; transition: all 0.5s;}
+                ul.subMenu>li{list-style: none;}
+                ul.subMenu>li a{display: block; width: 100px; padding: 5px 0 5px; text-decoration: none; background-color: antiquewhite;}
+                /* 페딩 안먹어;;; */
+                ul.subMenu>li a:hover{background-color: rgb(255, 192, 110);}
 
 
                 /*본문*/  
@@ -98,11 +106,16 @@
         <header>
             <h1>로고</h1>
             <nav>
-                <ul>
-                    <li><a href="http://"> 상단1</a> </li> 
-                    <li><a href="http://"> 상단2</a> </li> 
-                    <li><a href="http://"> 상단3</a> </li> 
-                    <li><a href="http://"> 상단4</a> </li> 
+                <ul id="mainMenu">
+                    <li><a href="http://" class="v"> 상단</a>
+                        <ul class="subMenu">
+                            <li><a href="http://">서브메뉴</a> </li>
+                            <li><a href="http://">서브메뉴</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="http://"> 상단</a> </li> 
+                    <li><a href="http://"> 상단</a> </li> 
+                    <li><a href="http://"> 상단</a> </li> 
                 </ul>
             </nav>
         </header>
