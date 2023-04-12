@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+        div#wrap {
+            border: 3px solid black;
+            width: 1024px;
+        }
+
+        div#wrap div div { /*하위 선택자 class z를 넣지 않고 사용*/
+            width: 492px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .a {
+            background-color: antiquewhite;
+            float: left;
+        }
+
+        .b {
+            background-color: rgb(211, 162, 98);
+            float: right;
+        }
+
+        .c {
+            background-color: rgb(87, 52, 6);
+            float: left;
+        }
+
+        .d {
+            background-color: rgb(65, 145, 47);
+            float: right;
+        }
+
+        #cont1::after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+        /* #cont2::after {
+            clear: both;
+            display: block;
+            content: "";
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="cont1">
+            <div class="a">1단</div>
+            <div class="b">2단</div>
+        <!-- </div> -->
+        <!-- <div id="cont2"> -->
+            <div class="c">3단</div>
+            <div class="d">4단</div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- class에 또 넣는 건 어쩔 수 없을 때 사용하기, 최대한 고치지 않기 -->
