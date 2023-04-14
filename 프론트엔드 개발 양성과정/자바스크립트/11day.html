@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 여백초기화 */
+        * {margin: 0; padding: 0;
+        }
+        /* 제목테그 */
+        h1,
+        h2,
+        h3 {padding: 20px;}
+
+        pre {background-color: rgb(228, 228, 228);}
+        body{ font-size: 100%;}
+        /* 링크스타일 */
+        a{
+            display: inline-block; padding: 3px; margin: 5px; /*인라인과 블록의 성격 모두 반영*/
+            border: 1px solid orange;
+
+            border-radius: 3px; /*모서리 동그랗게*/
+            /*(크기도 적용가능 패딩도 가능 , )*/
+        }
+        a:link{color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(255, 152, 93);}
+        a:visited{color: black; text-decoration: none;}
+        a:hover{color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(255, 218, 170);}
+        a:active{color: rgb(0, 0, 0); text-decoration: none;}
+        a:focus{color: rgb(176, 101, 101); text-decoration: none;}
+        /* 순서있음 */
+    </style>
+</head>
+<body>
+
+
+<h2>변수</h2>
+    <h3>복합대입연산자,  반복된 변수가 생략</h3>
+    (x=x+3) == (x+=3)
+
+    <a href="javascript:window.alert(number)">number</a>
+    <a href="javascript:window.alert(stringVar)">stringVar</a>
+    <pre><code>
+        var number = 4;
+        var stringVar = '';
+    
+        number %=2;
+        number +=1;
+    
+        stringVar +="Hello";
+        stringVar +="\n\tJavaScript";
+        alert(stringVar);
+    </code></pre>
+
+    <script>
+        var number = 4;
+        var stringVar = '';
+
+        number %=2;
+        number +=1;
+
+        stringVar +="Hello";
+        stringVar +="\n\tJavaScript";
+    </script>
+
+<h3>증감연산자,  1씩 더해지는</h3>
+    (x+=1) == (x++)
+
+    <a href="javascript:window.alert(number)">number1</a>
+    <pre>
+        <code>
+        var number1 = 10; //10
+        alert(number1++); //10
+        alert(number1++); //11
+        alert(++number1); //13
+        alert(--number1); //12
+        alert(number1++); //12
+        alert(++number1); //14
+    </code>
+</pre>
+
+    <script>
+        var number1 = 10; //10
+        alert(number1++); //10
+        alert(number1++); //11
+        alert(++number1); //14
+        alert(--number1); //13
+        alert(number1++); //13
+        alert(++number1); //14
+    </script>
+
+
+<!-- ----------------------------------------------prompt--------------------------------------------------- -->
+    <h3> prompt( 대화상자에 띄울 메세지, 기본설정값 )함수</h3> 사용자로부터 입력을 받을 때 사용하는 함수
+    <a href="javascript:window.alert(iam + '회원님 로그인되었습니다')">이름</a>
+    <pre>   
+        <code>
+        var iam = prompt("당신의 이름은?", "홍길동");
+        </code>
+    </pre>
+    <script>
+        var iam = prompt("당신의 이름은?", "비울 수 있음");
+        // alert(iam + "회원님 로그인되었습니다");
+    </script>
+        var iam = prompt("당신의 이름은?"); //undefined
+
+
+
+    <a href="javascript:window.alert(plus + 'kg이 적정체중입니다')">몸무게</a>
+    <pre>
+        <code>
+        var kg = prompt("당신의 몸무게는?", "입력해주세요");
+        </code>
+    </pre>
+    <script>
+        var kg = prompt("당신의 몸무게는?", "입력해주세요");
+        var plus = (kg-100)*3
+        // alert(iam + "회원님 로그인되었습니다");
+    </script>
+
+
+<h3>Number(heignt_guest)</h3>
+    <a href="javascript:window.alert('당신의 키의' +result + 'kg이 적정체중입니다')">적정체중</a>
+    <pre>
+        <code>
+        var kg = prompt("당신의 몸무게는?", "입력해주세요");
+        </code>
+    </pre>
+    <script>
+        var heignt_guest = prompt("당신의 키는?", "입력해주세요");
+        //Number() 함수를 사용하면 숫자로 변환된다
+        heignt_guest = Number(heignt_guest);
+        var result = (heignt_guest-100)*0.9;
+        // alert(iam + "회원님 로그인되었습니다");
+    </script>
+---------------------------------------------문자로 바꾼이유
+
+서비스 흐름도
+Flow Chart
+
+다음주는 조건문
+
+
+
+</body>
+</html>

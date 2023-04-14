@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 정리</title>
+    <style>
+        /* 여백초기화 */
+        * {margin: 0; padding: 0;
+        }
+        /* 제목테그 */
+        h1,
+        h2,
+        h3 {padding: 20px;}
+
+        pre {background-color: rgb(228, 228, 228);}
+        body{ font-size: 100%;}
+        /* 링크스타일 */
+        a{
+            display: inline-block; padding: 3px; margin: 5px; /*인라인과 블록의 성격 모두 반영*/
+            border: 1px solid orange;
+
+            border-radius: 3px; /*모서리 동그랗게*/
+            /*(크기도 적용가능 패딩도 가능 , )*/
+        }
+        a:link{color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(255, 152, 93);}
+        a:visited{color: black; text-decoration: none;}
+        a:hover{color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(255, 218, 170);}
+        a:active{color: rgb(0, 0, 0); text-decoration: none;}
+        a:focus{color: rgb(176, 101, 101); text-decoration: none;}
+        /* 순서있음 */
+    </style>
+</head>
+
+<body>
+    <h1>의사프로토콜 사용하기</h1>
+
+    <h2>1. 문자와 숫자</h2>
+    <h3>1. 문자와 숫자</h3>
+    <a href="javascript:window.alert( '김시연' )">김시연 뜨기</a>
+
+    <pre>
+        <code>
+            alert("김시연");
+        </code>
+    </pre>
+
+    <a href="javascript:window.alert( y-x*x)">y-x*x</a>
+    <a href="javascript:window.alert( (y - x) * y)">(y - x) * y</a>
+    <a href="javascript:window.alert( 1 + 10 * 10)">1 + 10 * 10</a>
+    <a href="javascript:window.alert( 12 % 7)">12 % 7</a>
+
+
+    <script>
+        var x = 1
+        var y= 10
+    </script>
+
+    <pre>
+        <code>
+            var x = 1
+            var y= 10
+            alert(1 + 10 * 10);
+            alert(12 % 7);
+        </code>
+    </pre>
+
+    <a href="javascript:window.alert('김시연' + 1)">"김시연" + 1</a>
+    <a href="javascript:window.alert('100' + 1)">"100" + 1</a>
+    <pre>
+        <code>
+            alert("김시연" + 1);
+            alert("100" + 1);
+        </code>
+    </pre>
+
+    <a href="javascript:window.alert(32 >= 45)">32 >= 45</a>
+    <a href="javascript:window.alert(false > true)">false > true</a>
+    <a href="javascript:window.alert('인내'<'끈기')">"인내" < "끈기"</a>
+    <a href="javascript:window.alert(32 <= 45 || 23 < 65)">32 <= 45 || 23 < 65</a>
+    <pre>
+        <code>
+            alert(32 >= 45);
+            alert(false > true);
+            alert("인내" < "끈기");
+            alert(32 <= 45 || 23 < 65);
+        </code>
+    </pre>
+
+<h3>변수</h3>
+<a href="javascript:window.alert(c)">c</a>
+<a href="javascript:window.alert(d)">d</a>
+<a href="javascript:window.alert(e)">e</a>
+<pre>
+    <code>
+        var c =100;
+        var c = 5; 
+        let d =100;
+        let d = 5; 
+        const e =100;
+        const e = 5; 
+    </code>
+</pre>
+
+<script>
+        var c =100;
+        var c = 5; 
+        let d =100;
+        let d = 5; 
+        const e =100;
+        const e = 5; 
+        // 함수가 아예 잘못
+</script>
+
+<a href="javascript:window.alert(f)">c</a>
+<a href="javascript:window.alert(g)">d</a>
+<a href="javascript:window.alert(h)">e</a>
+<pre>
+    <code>
+        var f =100;
+        f = 5; 
+        let g =100;
+        g= 5; 
+        const h =100;
+        h = 5; 
+    </code>
+</pre>
+
+<script>
+        var f =100;
+        f = 5; 
+        let g =100;
+        g = 5; 
+        const h =100;
+        h = 5;
+        
+        function adc ( ) {
+            var c = 10;
+            alert (c);
+            }
+        console . log(abc());  
+</script>
+
+
+
+<a href="javascript:window.alert(m())">m</a>
+<pre>
+    <code>
+        function m() {
+            for (var i = 0; i < 3; i++) { 
+                alert(i);
+            }
+            alert(i);
+        }
+        m();   
+    </code>
+</pre>
+
+<script>
+        function m() {
+            for (var i = 0; i < 3; i++) { 
+                alert(i);
+            }
+            alert(i);
+
+        }
+        m();  
+</script>
+<!-- -----------------------------------------------------------안나오게 -->
+
+<h3>템플릿리터럴</h3>
+<a href='javascript:window.alert("둘리만화 주인공은" + person1 + person2 +" 이 있다" )'>e</a>
+<pre>
+    <code>
+        var person1 = '둘리';
+        var person2 = "마이클";
+    </code>
+</pre>
+
+<script>
+var person1 = '둘리';
+var person2 = "마이클";
+
+</script>
+
+<h3>템플릿리터럴</h3>
+<a href='javascript:window.alert(movie )'>e</a>
+<pre>
+    <code>
+        var person3 = '둘리';
+        var person4 = "마이클";
+    </code>
+</pre>
+
+<script>
+var person3 = '둘리';
+var person4 = "마이클";
+var movie =`둘리만화 주인공은 ${person3},${person4}이 있다`;
+</script>
+
+
+<h3>템플릿리터럴</h3>
+<a href='javascript:window.alert(plus)'>e</a>
+<pre>
+    <code>
+        var person1 = '둘리';
+        var person2 = "마이클";
+    </code>
+</pre>
+
+<script>
+var person1 = '둘리';
+var person2 = "마이클";
+var plus = person1 + person2 + "있다"
+</script>
+
+    <h3>비교연산자</h3>
+    <a href="javascript:window.alert(100 < 101)">100 < 101</a>
+    <a href="javascript:window.alert(100 == 101)">100 == 101</a>
+    <a href="javascript:window.alert(100 > 100 > 1)">100 > 100 > 1</a>
+
+    <pre>
+        <code>
+            alert(100 < 101);
+            alert(100 == 101);
+            alert(100 > 100 > 10);
+        </code>
+    </pre>
+
+<h3>논리연산자</h3>
+    <a href="javascript:window.alert(110>100 && 100>10)">110>100 && 100>10</a>
+
+
+    <pre>
+        <code>
+            alert(110>100 && 100>10);
+        </code>
+    </pre>
+
+
+<h3>비교연산자</h3>
+    <a href="javascript:window.alert(''==false)">""==false</a>
+    <a href="javascript:window.alert(''==0)">""==0</a>
+    <a href="javascript:window.alert(1==true)">1==true</a>
+    <a href="javascript:window.alert(0==false)">0==false</a>
+    <a href="javascript:window.alert('123'==123)">"123"==123</a>
+
+
+    <pre>
+        <code>
+            alert(""==false);
+            alert(""==0);
+            alert(1==true);
+            alert(0==false);
+            alert("123"==123);
+        </code>
+    </pre>
+
+<h3>일치연산자</h3>
+<a href="javascript:window.alert(''===false)">""===false</a>
+<a href="javascript:window.alert(''===0)">""===0</a>
+<a href="javascript:window.alert(1===true)">1===true</a>
+<a href="javascript:window.alert(0===false)">0===false</a>
+<a href="javascript:window.alert('123'===123)">"123"===123</a>
+    <pre>
+        <code>
+            alert(""===false);
+            alert(""===0);
+            alert(1===true);
+            alert(0===false);
+            alert("123"===123);
+        </code>
+    </pre>
+
+    <h3>배열</h3>
+    <a href="javascript:window.alert(puppy[0])">puppy[0]</a>
+
+    <pre>
+        <code>
+            var puppy = ["해피", 4, "사냥꾼"]
+        </code>
+    </pre>
+
+    <script>
+        var puppy = ["해피", 4, "사냥꾼"]
+    </script>
+
+    <a href="javascript:window.alert(puppy[0])">puppy[0]</a>
+    <a href="javascript:window.alert(puppy[3])">puppy[3]</a>
+
+    <pre>
+        <code>
+            var puppy = ["해피", 4, "사냥꾼"]
+            puppy[0] = "태양";
+        </code>
+    </pre>
+
+    <script>
+        var puppy = ["해피", 4, "사냥꾼"]
+        puppy[0] = "태양";
+    </script>
+
+<h3>전역변수 지역변수</h3>
+
+
+
+<a href="javascript:window.alert(box)">box</a>
+<a href="javascript:window.alert(a())">a()</a>
+
+<pre>
+    <code>
+        var box = 100;
+        function a(){ 
+        }
+    </code>
+</pre>
+
+<script>
+        var box = 100;
+        function a(){ 
+        var box2 = 1000; 
+        }
+</script>
+
+<!-- undefined은 변수를 지정하고 값을 안넣었을때 -->
+<a href="javascript:window.alert(a())">box</a>
+<a href="javascript:window.alert(b())">box2</a>
+
+<pre>
+    <code>
+        function a(){ 
+            var box = 100;
+        }
+        function b(){
+            var box2 = 1000;
+        }
+    </code>
+</pre>
+
+<script>
+
+
+function a(){ 
+    var box = 100;
+}
+function b(){
+    var box2 = 1000;
+}
+</script>
+
+
+<h3>생성자함수</h3>
+
+<a href="javascript:window.alert(bread())">붕어빵완성</a>
+
+<script>
+function bread(){
+    alert("붕어빵 완성");
+}
+</script>
+
+// 생성자 함수
+function bread(){
+    alert("붕어빵 완성");
+}
+//bread(); // 반복이 불가
+
+var fish = new bread();  //반복 작동 //생성자 함수
+var fish = new bread();  //반복 작동//생성자 함수도 변수에 저장하여 사용할 수 있다.
+
+var fish = new bread();  //반복 작동
+var fish = new bread();  //반복 작동
+
+
+
+<h3>심볼</h3>
+
+<a href="javascript:window.alert(sym1===sym2)">sym1===sym2</a>
+
+<pre>
+    <code>
+        //var sym1 = Symbol ("심볼");
+        //var sym2 = Symbol ("심볼");
+    </code>
+</pre>
+
+<script>
+    var sym1 = Symbol ("심볼");
+    var sym2 = Symbol ("심볼");
+</script>
+
+<a href="javascript:window.alert(user.id)">user.id</a><!--undefined-->
+<a href="javascript:window.alert(user)">user</a><!--객체-->
+<a href="javascript:window.alert(user.name)">user.name</a><!--김시연-->
+<a href="javascript:window.alert(user['name'])">user["name"]</a><!--김시연-->
+<a href="javascript:window.alert(id)">id</a><!--undefined-->
+<a href="javascript:window.alert(user[Symbol(id)])">user[Symbol("id")]</a><!--undefined-->
+<a href="javascript:window.alert(user[id])">user[id]</a><!--no1-->
+
+<pre>
+    <code>
+        var user = {name:"김시연"}
+        var id = Symbol("id"); 
+        user[id]="no1";
+    </code>
+</pre>
+
+<script>
+    var user = { name: "김시연" }
+    var id = Symbol("id");
+    user[id] = "no1";
+</script>
+
+<h2>변수와 상수</h2>
+<h3>데이터형(객체)-var</h3>
+<a href="javascript:window.alert( cat['color'] )">cat 객체의 색상값은?</a>
+<a href="javascript:window.alert( cat.age )">cat 객체의 나이값은?</a>
+
+<pre>
+    <code>
+        var cat = { nickName: "koko" , age:2, color: "white" }
+    </code>
+</pre>
+
+<script>
+    var cat = { nickName: "koko", age: 2, color: "white" }
+</script>
+
+<h3>데이터형(객체)-let</h3>
+<a href="javascript:window.alert( cat['color'] )">cat 객체의 색상값은?</a>
+<a href="javascript:window.alert( cat.age )">cat 객체의 나이값은?</a>
+
+<pre>
+    <code>
+        let cat = { nickName: "koko" , age:2, color: "white" }
+    </code>
+</pre>
+
+<script>
+    let cat = { nickName: "koko", age: 2, color: "white" }
+</script>
+
+<h3>데이터형(객체)-const</h3>
+<a href="javascript:window.alert( cat['color'] )">cat 객체의 색상값은?</a>
+<a href="javascript:window.alert( cat.age )">cat 객체의 나이값은?</a>
+
+<pre>
+    <code>
+        const cat = { nickName: "koko" , age:2, color: "white" }
+    </code>
+</pre>
+
+<script>
+    const cat = { nickName: "koko", age: 2, color: "white" }
+</script>
+</body>
+</html>
