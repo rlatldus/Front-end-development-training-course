@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <!-- 상단 로고 -->
+            <h1><a href="#">학교폭력상담실</a></h1>
+        </header>
+        <section class="login">
+            <form onsubmit="login()">
+                <fieldset>
+                    <legend>로그인페이지</legend>
+                    <ul class="login_main">
+                        <li>
+                            <label for="userId">아이</label>
+                            <input type="text" id="userId" required placeholder="Guest" tabindex="1">
+                        </li>
+                        <li>
+                            <label for="userPw">비밀</label>
+                            <input type="password" id="userPw" required placeholder="******" tabindex="2">
+                        </li>
+                    </ul>
+                    <div class="button">
+                        <button type="submit" tabindex="3"> 로그인</button>
+                    </div>
+                    <!-- <button id="register" size="20" maxlength="20"><label for="register"><a href=".html">회원가입</a></label></button> -->
+                </fieldset>
+            </form>
+            <ul class="foot">
+                <li>비밀번호찾기</li>
+                <li>|</li>
+                <li>아이디 찾기</li>
+                <li>|</li>
+                <li>회원가입</li>
+            </ul>
+            <p>© 학교폭력상담실.</p>
+        </section>
+    </div>
+</body>
+
+</html>

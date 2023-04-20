@@ -1,0 +1,38 @@
+/*여백초기화*/
+*{margin: 0; padding: 0;}
+/*테두리없앰*/
+fieldset{border: 0;}
+legend{display: none;}
+/*제목숨김-보일 수 있지만 숨김*/
+/*세로정렬*/
+label,input,select{vertical-align: middle;}
+/*기본 링크 스타일*/
+a:link{color: black; text-decoration: none;}
+a:visited{color: black; text-decoration: none;}
+a:hover{color: black; text-decoration: none;}
+a:active{color: black; text-decoration: none;}
+a:focus{color: black; text-decoration: none;}
+
+div#wrap{ width: 500px; margin: 0 auto; text-align: center; padding: 20px;}
+
+header{padding: 100px 0 50px;}
+h1{font-size: 35px; width: 100%;}
+
+form{border: 1px solid black; background-color: rgb(255, 255, 255); width: 430px; padding: 40px 30px; border-radius: 10px;margin: 0 auto; }
+ul.login_main{background-color: rgb(255, 255, 255); border-collapse: collapse; }
+ul.login_main li{ width: 100%; padding: 5px 0; display: inline-block;border: 1px solid black;}
+input{padding: 10px; width: 300px; background-color: rgb(255, 255, 255); border: 0;}
+
+div.button{padding: 40px 0 0;}
+button{width: 100%; height: 60px;}
+/* th{width: 50px;}
+td{width: 350px;} */
+
+
+
+ul.foot{width: 100%; background-color: rgb(255, 255, 255); margin: 0 auto; text-align: center; padding-top: 30px; }
+ul.foot li{list-style: none; padding: 5px; display: inline-block;  }
+
+
+
+
