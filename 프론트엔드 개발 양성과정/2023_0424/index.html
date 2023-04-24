@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="car.css">
+    <!-- <script src="car.js"></script> -->
+    <script>
+
+        function showCar(x){
+            //getAttribut 는 속성을 가저오는
+            //setAttribut 은 속성을 바꾸는
+            var yellow = document.getElementById("yellow");
+            var id= x.getAttribute("id");
+
+            if(1){
+                yellow.style.zIndex=4;
+            }else{
+                alert("a");
+            }
+
+            // var source= x.getAttribute("href");
+            // var placeholder = document.getElementById("placeholder");
+            // placeholder.setAttribute("src", source);
+
+
+        }
+        
+    </script>
+</head>
+<body>
+    <h3>자동차 색상</h3>
+    <ul>
+        <li><a href="images/car_yellow.jpg" id="y" onclick="showCar(this); return false"><img src="images/yellow.jpg" alt="노"></a></li>
+        <li><a href="images/car_black.jpg"onclick="showCar(this); return false"><img src="images/black.jpg" alt="검"></a></li>
+        <li><a href="images/car_grey.jpg" onclick="showCar(this); return false"><img src="images/grey.jpg" alt="회"></a></li>
+        <li><a href="images/car_blue.jpg"onclick="showCar(this); return false"><img src="images/blue.jpg" alt="파"></a></li>
+    </ul>
+
+    <div>차가 보여지는 영역
+        <!-- <img src="images/img_ing.jpg" id="placeholder" alt="car"> -->
+    </div>
+
+
+    <ul id="car">
+        <li ><img src="images/car_yellow.jpg" id="yellow" alt="">
+        <img src="images/car_black.jpg"id="black" alt="">
+        <img src="images/car_grey.jpg" id="grey"alt="">
+        <img src="images/car_blue.jpg"id="blue" alt=""></li>
+    </ul>
+</body>
+</html>

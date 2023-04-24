@@ -1,0 +1,152 @@
+/*여백초기화*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*테두리없앰*/
+fieldset {
+    border: 0;
+    legend {
+        display: none;
+    }
+    /*제목숨김-보일 수 있지만 숨김*/
+    /*세로정렬*/
+    label,
+    input,
+    select {
+        vertical-align: middle;
+    }
+    label{
+        display: inline-block;
+        width: 70px;
+    }
+}
+
+
+
+/*기본 링크 스타일*/
+a{
+    &:link {
+    color: black;
+    text-decoration: none;
+}
+&:visited {
+    color: black;
+    text-decoration: none;
+}
+&:hover {
+    color: black;
+    text-decoration: none;
+}
+&:active {
+    color: black;
+    text-decoration: none;
+}
+&:focus {
+    color: black;
+    text-decoration: none;
+}
+}
+
+
+
+header {
+    text-align: center;
+    padding-top: 70px;
+    h3 {
+        background-color: rgb(255, 255, 255);
+        padding: 5px;
+    }
+    p {
+        padding-top: 10px;
+    }
+}
+
+
+ul.a {
+    background-color: antiquewhite;
+    width: 100%;
+    position: relative;
+    li {
+        position: absolute;
+        width: 150px;
+        height: 40px;
+        top: 20px;
+        list-style: none;
+        text-align: center;
+        line-height: 40px;
+        &:nth-child(1) {
+            left: 50%;
+            margin-left: -0px;
+            background-color: rgb(255, 255, 255);
+            &:nth-child(2) {
+                left: 50%;
+                margin-left: -150px;
+                background-color: rgb(255, 255, 255);
+            }
+        }
+    }
+}
+
+
+
+
+/*로그인영역*/
+section{
+    &.login {
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 200px;
+        width: 300px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        /*로그인 폼영억*/
+        form {
+            width: 300px;
+            background-color: rgb(255, 255, 255);
+            table {
+                width: 290px;
+                border-collapse: collapse;
+                border: 0px solid red;
+                margin: 0 5px;
+                input.box {
+                    width: 100px;
+                    padding: 5px;
+                }
+                td {
+                    padding: 5px;
+                    background-color: rgb(255, 255, 255);
+                    button {
+                        font-size: 12px;
+                        padding: 20px 10px;
+                        border: 0;
+                        background-color: rgb(76, 76, 76);
+                        color: aliceblue;
+                    }
+                }
+            }
+        }
+    }
+    /*비회원로그인제목*/
+    &#section1 h3 {
+        padding: 5px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(255, 179, 132);
+    }
+    /*회원로그인제목*/
+    &#section2 h3 {
+        padding: 5px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(255, 179, 132);
+    }
+    .find {
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid violet;
+        background-color: rgb(255, 255, 255);
+        margin: 0 5px;
+    }
+
+}

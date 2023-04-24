@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+    padding: 0;
+    font-size: 14.8px;
+    font-family: Consolas, sans-serif;
+}
+
+fieldset{border: 0px;}
+
+legend{display: none;}
+
+
+
+div#wrap{
+    border: 0px solid rgb(25, 175, 11); width: 500px; margin: 0 auto;
+}
+
+h1{
+    font-family: 'TheJamsil5Bold';
+    font-size: 50px; margin-top: 50px; margin-bottom: 30px; text-align: center; font-weight: bolder; color: rgb(2, 192, 34);
+}
+
+label{letter-spacing: 0.01px; display: block; width: 450px; font-weight: 900; margin-bottom: 10px;}
+
+p{width: 100%; letter-spacing: -2px; margin: 0 auto;}
+
+label>span.s{
+    color: rgb(52, 52, 52); 
+    text-decoration: underline; padding-bottom: 30px; 
+}
+
+label>span{
+    color: rgb(90, 129, 129); font-size: 12px;
+}
+
+#boder{
+    font-size: 12px; font-weight: 100; padding: 10px;
+    margin: 10px 10px 30px 10px ; width: 450px; height: 60px; border: 1px solid rgb(207, 207, 207); background-color: rgb(255, 255, 255); overflow: auto;
+}
+
+button{
+    width: 230px;
+    height: 60px;
+    /* margin: 10px; */
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: none;
+    
+}
+
+
+button.cancle{
+    float: left;
+    background-color: rgb(153, 153, 153); 
+
+}
+button.ok{
+    float: right;
+    background-color: rgb(21, 161, 32); 
+
+}
+#area{
+    /* margin: 0 auto; */
+    margin-top: 20px;
+    text-align: center;
+    font-size: 200%;
+}
+ul{
+    
+    margin: 20px 0 0 0;
+    padding: 20px;
+    text-align: center;
+}
+ul li{ 
+    font-size: small;
+list-style: none;
+float: left;
+}
+ul li a{
+    margin: 10px;
+}
+ul::after{
+    clear: both; display: block; content: "";
+}
+footer{
+
+    text-align: center;
+
+    font-size: small;
+
+}
+
+/* margin 0 auto는 블록테그일때만 가능 */
+/* text-align 센터는 부모가 있을때 가능 */
