@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="car copy.css">
+    <!-- <script src="car.js"></script> -->
+    <script>
+
+        function showCar(x){
+            //getAttribut 는 속성을 가저오는
+            //setAttribut 은 속성을 바꾸는
+            var source= x.getAttribute("href");
+            var placeholder = document.getElementById("placeholder");
+            placeholder.setAttribute("src", source);
+            
+            var y= document.getElementsByClassName("y");
+
+            for(var i=0; i<y.length; i++){
+                var colors = y.item(i);
+                if(x==colors){
+                    x.setAttribute("style","background-color: yellow");
+                }else{
+                    colors.setAttribute("style","background-color: black");
+                }
+            } 
+
+            // if(color.style.backgroundColor ==)
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <section id="sideImage">
+    <h3>자동차 색상</h3>
+    <div>
+        <img src="images/car_white.jpg" id="placeholder" alt="car">
+    </div>
+<ul class="control">
+    <li><a href="images/car_red.jpg" class="y on" onclick="showCar(this); return false">숫자</a></li>
+    <li><a href="images/car_basy.jpg" class="y" onclick="showCar(this); return false">숫자</a></li>
+    <li><a href="images/car_black.jpg" class="y" onclick="showCar(this); return false">숫자</a></li>
+    <li><a href="images/car_red.jpg" class="y" onclick="showCar(this); return false">숫자</a></li>
+</ul>
+</section>
+
+</body>
+</html>
