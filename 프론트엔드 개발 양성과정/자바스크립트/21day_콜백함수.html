@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = [
+            "Hydrogen",
+            "Helium",
+            "Lithium",
+            "Beryl­lium"
+        ];
+
+        var a2 = a.map(function (s) { return s.length });
+        console.log(a2); // logs [8, 6, 7, 9]
+
+        // 화살표 함수 사용
+        var a3 = a.map(s => s.length);
+        console.log(a3); // logs [8, 6, 7, 9]
+
+
+
+
+        function Person() {
+            // `Person()` 생성자는 `this`를 자신으로 정의합니다.
+            this.age = 0;
+
+            setInterval(function growUp() {
+                // 느슨한 모드에서 `growUp()` 함수는 `this`를 전역 객체로 정의합니다.
+                // 이는 `Person()` 생성자에 의해 정의된 `this`와 다릅니다. 
+                this.age++;
+            }, 1000);
+        }
+
+        var p = new Person();
+
+
+
+
+        function Person() {
+            this.age = 0;
+
+            setInterval(() => {
+                // `this`는 person 객체를 가리킵니다.
+                this.age++;
+            }, 1000);
+        }
+
+        var p = new Person();
+
+
+
+
+
+
+
+
+
+
+
+        check();
+
+        function check(){
+            var i=0;
+            var sum=0;
+
+            while(1){
+                i++;
+                sum +=i;
+                if(sum>20){
+                    message();
+                    break;
+                }
+                console.log(i);
+                console.log(sum);
+            }
+        }
+        var message = function(){
+            // alert("합이 20넘었어요");
+        }
+            
+            //message 넣은 이유
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+    let gogo = ( function(x,y){
+        return x*y;
+    }
+    (1,100)// 자기호출함수도 일반합수처럼 매개변수와 인수를 사용할 수 있다
+    );
+    // alert(gogo);
+
+    //예외처리- 나중에 써먹음
+        var i = 1;
+        var y = 0;
+        try {
+            if (y === 0) {
+                throw new Error("0으로 나누려고함");
+            }
+        } catch (e) {
+            console.log(e.message);
+        }
+
+
+//     function multiply(a, b = 1) {
+//   return a * b;
+// }
+// multiply(5); // 5
+// console.log(multiply(5));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

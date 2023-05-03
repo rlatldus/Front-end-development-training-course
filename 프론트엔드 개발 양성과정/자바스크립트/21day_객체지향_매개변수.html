@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var Member=function(){}
+        // const Menber = () => { };
+        // mem = new Member();
+        function Person(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+
+        const rand = new Person("Rand McNally", 33, "M");
+        const ken = new Person("Ken Jones", 39, "M");
+
+        function Car(make, model, year, owner) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.owner = owner;
+        }
+
+        const car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+        const car2 = new Car("Nissan", "300ZX", 1992, ken);
+
+        console.log(car2.owner.name);
+        
+        
+        // Car.prototype.getName=function(){
+        //     this.make,this.model,this.year,this.owner;
+        // }
+        // console.log(car2.getName(name));
+
+// ---------------------------------------------------------------------------
+        const Member = function(firstName,lastName,getName){
+            this.firstName = firstName;
+            this.lastName=lastName;
+            this.getName=getName;
+        }
+        
+        
+        // Member.prototype.getName=(firstName,lastName,happyName="a");
+
+        const mem=new Member("마리오","리","아");
+        // }
+        // Member.prototype.getName=function(){
+        //     return this.lastName+this.firstName;
+        // }
+        console.log(mem.firstName,mem.lastName,mem.getName);
+        
+        // mem.getName = function(){
+        //         return this.lastName+this.firstName;
+        //     }
+        // const mem1 =  new Membar("마리오","리");
+        // const mem2 =  new Membar("마리마리","리");
+
+
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
