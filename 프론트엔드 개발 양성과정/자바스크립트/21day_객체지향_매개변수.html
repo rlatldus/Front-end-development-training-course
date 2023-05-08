@@ -47,20 +47,36 @@
         
         // Member.prototype.getName=(firstName,lastName,happyName="a");
 
-        const mem=new Member("마리오","리","아");
+        const mem=new Member("리", "마" ,"리","오");
         // }
+        console.log(mem); // New 선언하면 새로 할당 값이 들어가지 않아서
         // Member.prototype.getName=function(){
         //     return this.lastName+this.firstName;
         // }
         console.log(mem.firstName,mem.lastName,mem.getName);
+
+        mem.getName = function(){
+            return this.lastName +this.firstName;
+        }
+        console.log(mem.getName());
         
         // mem.getName = function(){
         //         return this.lastName+this.firstName;
         //     }
         // const mem1 =  new Membar("마리오","리");
-        // const mem2 =  new Membar("마리마리","리");
+        // const mem2 =  new Membar("마리마리","리"); //에러
 
+        const data ="abc";
+        const box1 ={data:"값1"}; //전역변수
+        const box2 ={data:"값2"}; //전역변수
 
+        function i(){
+            console.log(this.data);
+        }
+        i.call(null); // call 매소드
+        i.call(box1); // call 매소드
+        i.call(box2); // call 매소드
+        i();
 
 
 </script>
