@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본형</title>
+    <script>
+        // 기본형과 참조형
+            var  x = 1; //x라는 변수 생성 하고 1이라는 값을 할당(대입)
+            var  y =x; //변수에 변수를 할당할 수 있다
+                x = 2;
+
+            alert(y); //1
+
+            // 참조형
+            var data1 = [0,1,2]; // 57p주소가 같아서 달라지지 않음
+            // data1[0] = 5; >> 똑같이 5,1,2 나옴
+            var data2 = data1;
+            data1[0] = 5;
+            console.log(data2); //[5,1,2]
+
+    </script>
+</head>
+<body>
+    <!-- 스텍 static--후입선출  (기본타입)
+    문자열, 숫자, 불린, 언디파인드, 널 은 박안놓는 정적
+        -꽉채워져 있는 상태에서 데이터 삽입 >> 오버플로우
+        -더이상 삭제할 데이터가 없는 상태에서 삭제>>언더플로
+    
+    6,3,5,6,8의 순서로 정해진 입력자료를 스택에 입력하였다가 출력한 결과가 될 수 없는 것
+    (왼쪽부터 출력)
+    6538
+    5386
+    5683
+    6835 안돼
+
+    
+    힙  ( 참조타입)
+    배열이나 객체 함수는 속성 , 값으로  동적
+    참조(주소)를 저장한다. 주소가 왔다갔다 해서 주소 속 값은 달라지지 않음
+
+    
+    가비지콜렉션         비우는 거
+
+    메모리 할당 > 변수에 데이터 대입  -->
+    </body>
+</html>

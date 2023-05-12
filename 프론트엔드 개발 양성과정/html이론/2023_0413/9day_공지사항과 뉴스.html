@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체 여백 제거 */
+    *{ margin: 0; padding: 0;}
+        /* 블릿표시제거 */
+    ul li {list-style: none;}
+        /* 링크스타일  */
+    /* ul li a{text-decoration: none;} */
+    a:link { color: rgb(238, 151, 238); text-decoration: none;}
+    a:visited {color: black; text-decoration: none;}
+    a:hover {color: rgb(28, 93, 125); text-decoration: underline;}
+    a:active {color: rgb(255, 0, 0); text-decoration: none;}
+    a:focus {color: rgb(66, 145, 54); text-decoration: none;}
+    
+    /* section{background-color: brown;} */
+        body{position: relative;}
+        
+    /* 공지사항 */
+        section.notice{ position: absolute; left: 50px;  background-color: rgb(153, 52, 123); width: 300px; /*height: 200px; 유동적인 높이를 만드는 li의 개수가 늘어도 변함*/ padding-bottom: 10px; border: 0px solid gray;}
+        /* 왜 가로가 지정해주어야 함, section의 가로가 사라짐 블럭이 아니게 됌 */
+        /* 공지 텝 */
+        /* 포지션 relative */
+        section.notice h3 { position: absolute; padding: 10px; background-color: rgb(226, 225, 225); border: 0px solid darkblue;}
+        /* 포지션에 높이 불가 페딩을 넣을 수 있음 */
+        /* absolute 는 앞에 업로투스에 상속 */
+        section.notice ul{ background-color: rgb(46, 121, 96); position: absolute; /* 바디를 기준으로 absolute 뒤에 absolute가 위에 감*/ left: 0;top: 40px;  width: 100%; padding-left: 20px; border: 0px solid darkcyan;}
+        section.notice ul li {
+            position: relative; padding: 5px; padding-left: 30px;
+            background-color: aquamarine;
+            background:url("icon.png") no-repeat 0 8px;
+            background-size: 20px 20px;    
+        }
+        section.notice ul li time{position: absolute; right: 10px;}
+        section.notice p.more {position: absolute; top: 10px; right: 10px; } /*더보기*/
+
+        /* 포지션은 상속일 때 사용 */
+
+    /* 뉴스 */
+        section.news{position: absolute;  /* 바디를 기준으로 겹침*/ background-color: antiquewhite; width: 300px; /*height: 200px; 유동적인 높이를 만드는 li의 개수가 늘어도 변함*/ padding-bottom: 10px; border: 0px solid rgb(201, 63, 63);}
+        /* 뉴스 텝 */
+        section.news h3 {position: absolute; left: 100px; top: 0; padding: 10px; background-color: bisque; border: 0px solid darkblue;}
+        section.news ul{display: none;  position: absolute; /*포지션으로 가로가 사라짐 w에 100%넣음*/ width: 100%; left: 0;top: 40px; padding-left: 20px; border: 0px solid rgb(103, 76, 139);}
+        section.news ul li {
+            position: relative; padding: 5px; padding-left: 30px;
+            background-color: aquamarine;
+            background:url("icon.png") no-repeat 0 8px;
+            background-size: 20px 20px;    
+        
+        }
+        section.news ul li time{position: absolute; right: 10px;}
+        section.news p.more {position: absolute; top: 10px; right: 10px; } /*더보기*/
+
+    /* ctrl f 한번에 바꾸기 */
+
+
+    </style>
+
+
+</head>
+<body>
+    <section class="notice">
+        <h3>공지사항</h3>
+            <ul>
+                <li><a href="9day_8day_미리보기콘텐츠_마크업.html" target="_blank" >공지제목~</a>  <!--<time> 23.03.30 </time>--></li>
+                <li><a href="">공지아ㅓㄹ아러제목~</a>  <!--<time> 23.03.29</time>--></li>
+                <li><a href="">공지제목~</a>  <!--<time> 23.03.29</time>--></li>
+                <li><a href="">공지제목~</a>  <!--<time> 23.03.22</time>--></li>
+                <li><a href="">공지제목~</a>  <!--<time> 23.03.22</time>--></li>
+                <li><a href="">공지제목~</a>  <!--<time> 23.03.22</time>--></li>
+
+            </ul>
+            <p class="more">
+                <!-- <a href="http://">더보기</a> -->
+            </p>
+
+<!-- section>(h3+ul>(li>(a+time))*3) -->
+    </section>
+    <!-- <section class="news"> -->
+        <!-- 뉴스 탭 -->
+        <!-- <h3 class="">뉴스</h3>
+            <ul>
+                <li><a href="9day_8day_미리보기콘텐츠_마크업.html" target="_blank" >공지제목~</a>  <time> 23.03.30 </time></li>
+                <li><a href="">공ㄴ지제목~</a>  <time> 23.03.29</time></li>
+                <li><a href="">공지제목~</a>  <time> 23.03.29</time></li>
+                <li><a href="">공지제목~</a>  <time> 23.03.22</time></li>
+                <li><a href="">공지제목~</a>  <time> 23.03.22</time></li>
+                <li><a href="">공지제목~</a>  <time> 23.03.22</time></li>
+
+            </ul>
+            <p class="more">
+                <a href="http://">더보기</a>
+            </p> -->
+
+<!-- section>(h3+ul>(li>(a+time))*3) -->
+    </section>
+    <!-- 더보기는 ul 뒤에 사용, section에 포지션 re 더보기는 a~~ -->
+</body>
+</html>
+
+<!-- link 어떻게 쓰지 -->
+
+<!-- 포지션 다 블록에서 변함 -->

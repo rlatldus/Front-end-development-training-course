@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심볼함수</title>
+    <script>
+        //var sym1 = Symbol ("심볼"); //심볼함수 ()는 "유일한 속성"을 만들때 사용
+        //var sym2 = Symbol ("심볼");
+       // console.log(sym1===sym2); // 같지 않다라고 나옴//false
+
+        // 심볼함수는 유일한 속성을 만들때 사용
+        var user = {name:"김시연"} //객체를 변수에 저장
+        var id = Symbol("id"); //심볼함수를 사용해서 유일한 속성을 만들고 변수에 저장
+        user[id]="no1";
+
+
+        alert(user.id);//undefined >>김시연 옆에 아무것도 없어
+        alert(user); // 객체
+        alert(user.name); //김시연
+        alert(user["name"]); //김시연
+        //alert(id) //undefined
+        alert(user[Symbol("id")]);//undefined
+        alert(user[id]);//no1
+
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

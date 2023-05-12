@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const a =()=>{
+        //     alert("sksk")
+        // }
+        // a();
+
+        // let xyz = (a,b,c)=>{
+        //     let result="a+b+c";
+        //     return alert(result);
+        // }
+        // xyz(1,2,3);
+
+
+        //TODO 화살표 함수와 그냥 함수는 다르다
+        function BlackDog() {
+            this.dogName = "화이트";
+            return {
+                dogName: "블랙",
+                bark: function () {
+                    console.log(this.dogName + "멍멍");
+
+                }
+            }
+        }
+
+        let blackDog = new BlackDog();
+        blackDog.bark();
+
+        function WhiteDog() {
+            this.dogName = "화이트";
+            return {
+                dogName: "블랙",
+                bark: () => {
+                    console.log(this.dogName + "멍멍");
+                }
+            };
+        }
+        let whiteDog = new WhiteDog();
+        whiteDog.bark();
+
+
+        // prompt("안녕하세요")
+        
+        // //TODO 커피머신함수
+        // const coffeeMachine = () => {
+        //     // const coffee_r = [];
+        //     // const cola = [];
+        //     // const americano = [];
+        //     let coffee_r=prompt("돈 넣어주세요","");
+        //     let cola= prompt("돈 넣어주세요","");
+        //     let americano= prompt("돈 넣어주세요","");
+        //     let total =coffee_r+cola+americano;
+        //     total = parseInt(total);
+
+        //     if (total >2500) {
+        //         // let total = [];
+        //         alert(`${total}아메리카노 나왔어요`);
+        //     } else if (total < 1000) {
+        //         // let total = [];
+
+        //         alert(`${total}금액이 모자라요`);
+        //     } else if(total >=1000){
+        //         // let total = [];
+        //         alert(`${total}돈 가져가세요`);
+        //     };
+        // }
+
+        // coffeeMachine();
+
+        //     const coffeeMachine = (arguments) => {
+        //         const coffee_r = 1000;
+        //         const cola = 1500;
+        //         const americano = 900;
+        //         let total = 0;
+        //         for (let i = 0; i < arguments.length; i++) {
+        //             total += arguments[i];
+        //             if (total == americano) {
+        //                 alert("dksjl")
+        //                 return alert("dklsdfjsl")
+        //             }
+
+        //         }
+        // }
+        // coffeeMachine(100,100,10000,200)
+
+
+        let a= prompt("뭘 먹나요?","");
+        let ame=900;
+        let ame_l=1500;
+        let se=1000;
+        let ca=2500;
+        total=0;
+        if(a==ame){
+            alert(`아메리카노 나왔어요 가격은${ame}입니다`)
+        }else if(a==ame_l){
+            alert(`아메리카노 나왔어요 가격은${ame_l}입니다`)
+        };
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

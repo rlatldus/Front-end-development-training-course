@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모두 p를 나타냄 */
+        /* 모든 태그 선택 */
+        /* ??? 작동 안됌 */
+        *{ border: 10px soild red;}
+
+
+        /* 위가 우선 */
+        /* 구체적일 수록 우선 */
+
+
+
+        /* 아이디 + 아이디 선택자 우선 순위가 높음  */
+        div#box_id p#p_id {background-color: rgb(227, 255, 246);}
+
+        #box_id>p{background-color: rgb(247, 38, 38);}
+
+        /* 아이디 선택자 우선 순위가 높음  */
+        p#p_id {background-color: rgb(199, 255, 236);}
+
+        /* 클래스 + 클래스 선택자 우선 순위가 높음  */
+        .box_class>p.p_class {background-color: rgb(22, 58, 46);}
+
+        /* 클래스 + 아이디    */
+        .box_class>p.p_id {background-color: rgb(0, 0, 0);}
+
+
+        /* 클래스 선택자 우선 순위가 높음  */
+        p.p_class {background-color: rgb(17, 30, 26);}
+
+        /* 하위선택자 우선 순위가 높음  */
+        div>p {background-color: rgb(168, 239, 216);}
+
+        div p {background-color: rgb(91, 114, 107);}
+
+        /* 태그선택자 */
+        /* 위치가 하위선택자 아래에 있어도 같음--*/
+        p{background-color: aqua;}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>선택자 사용 시 우선순위</h1>
+    <div id="box_id" class="box_class">저는 상위
+        <p id="p_id" class="p_class">저는 하위</p>
+    </div>
+</body>
+</html>
+
+
+
+<!-- 음식 개인 포폴 태그 잘 사용했는지 확인 -->

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        header {
+            text-align: center;
+            width: 1024px;
+            height: 290px;
+        }
+
+        h1 {
+            background-color: antiquewhite;
+            /* display: block; 할 필요없음.. 이거 자체가 블록태그*/
+            /* width: 1024px; */
+            /* height: 200px; */
+            padding: 100px 0 100px;
+        }
+
+
+        nav {
+            background-color: saddlebrown;
+            width: 500px;
+            height: 50px;
+            padding: 0 262px 0;
+
+        }
+
+        ul#main>li {
+            background-color: rgb(168, 168, 255);
+            position: relative;
+            /* ul이 아니라 li에 넣기 */
+            float: left;
+            list-style: none;
+        }
+
+        ul#main>li>a {
+            width: 100px;
+            font-size: 20px;
+            padding: 12px 0 12px;
+            display: block;
+            text-decoration: none;
+            color: aliceblue;
+            background-color: violet;
+            /* float: left; a가 아니라 li에 넣기*/
+        }
+        
+        /* !!!!!   폰트 사이즈에 3/4 곱해야 폰트의 여백도 계산*/
+        ul#main>li:hover ul.sub {
+            height: 80px;
+        }
+
+        /* 
+        ul#main>li>a:hover ul.sub {
+        height: 80px;
+        }
+        a에 호버시엔 안되네*/
+
+
+        ul#main>li>a:hover {
+            background-color: rgb(158, 105, 158);
+        }
+
+        ul#main>li:hover .bar {
+            background-color: rgb(158, 105, 158);
+        }
+
+        /* a에 호버 아님 */
+
+        ul.sub { 
+            transition: all 1s;
+            overflow: hidden;
+            background-color: rgb(234, 255, 6);
+            position: absolute;
+            width: 100px;
+            height: 0px;
+            left: 0;
+            top: 150px;
+            /* border: 50px solid black; */
+
+        }
+
+        /* 라인 색 적용 안됌 -----------------------------?*/
+
+
+        ul.sub>li {
+            font-size: 15px;
+            list-style: none;
+            background-color: rgb(0, 0, 255);
+            border: 1px solid rgb(255, 255, 255);
+
+        }
+
+        ul.sub>li>a {
+            color: #ffffff;
+            /* 글자 스타일은 a에 넣기 왜지 상속 안되나--*/
+            display: block;
+            width: 100px;
+            padding: 10px 0 10px;
+            text-decoration: none;
+            background-color: blueviolet;
+
+        }
+
+        ul.sub>li>a:hover {
+            background-color: rgb(128, 77, 77);
+            color: aliceblue;
+        }
+
+        /* 왜 배경색이 안바뀌지 -----------------------------?*/
+
+        div {
+            background-color: aquamarine;
+            width: 1024px;
+            height: 100px;
+            border: 3px solid darkblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            안녕하세요
+        </h1>
+        <nav>
+            <ul id="main">
+                <li><a href="#" class="bar">메인1</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메인2</a></li>
+                <li><a href="#">메인3</a></li>
+                <li><a href="#">메인4</a></li>
+                <li><a href="#">메인5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div></div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
+
+solid, sub 글씨 잘 보기

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애월국수</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      /* background-color: rgba(0, 0, 0, 0.34); */
+      font-size: 0;
+    }
+
+    @media(max-width:400px) {
+
+      /* 모바일*/
+      header {
+        background-color: rgba(82, 82, 77, 0.749);
+        width: 400px;
+        height: 50px;
+      }
+
+      h1 {
+        float: left;
+        display: block;
+        width: 350px;
+        height: 50px;
+        /* background-color: aqua; */
+        /* text-align: center; */
+        /* display: inline; */
+      }
+
+      h1 a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        font-size: 20px;
+        height: 30px;
+        width: 90px;
+        /* background-color: antiquewhite; */
+      }
+
+
+      nav {
+        display: block;
+        float: left;
+      }
+
+      ul {
+        display: none;
+      }
+
+      div.bar {
+        float: right;
+        /* padding: 0px; */
+        width: 50px;
+        height: 50px;
+      }
+
+      a {
+        /* text-align: center; */
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding: 15px 10px;
+        font-size: 15px;
+        width: 30px;
+        height: 20px;
+        /* background-color: aquamarine; */
+      }
+    }
+
+    @media (min-width:401px) and (max-width:799px) {
+
+      /* 데스크탑*/
+      header {
+        background-color: rgba(82, 82, 77, 0.749);
+        width: 100%;
+        height: 100px;
+      }
+
+      h1 {
+
+        padding: 25px 3.75469336671% 25px;
+        display: inline;
+        float: left;
+      }
+
+      h1 a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        font-size: 40px;
+        height: 40px;
+        width: 25.031289111%;
+      }
+
+      nav {
+        float: right;
+      }
+
+      ul li {
+        padding: 30px 0.62578222778% 20px;
+        float: left;
+        list-style: none;
+
+      }
+
+      ul li a {
+        text-align: center;
+        width: 115.01877346683%;
+        height: 50px;
+        display: block;
+        font-size: 20px;
+        text-decoration: 0;
+        color: white;
+        font-size: bold;
+      }
+
+      ul li a:hover {
+        color: rosybrown;
+      }
+
+    }
+
+    @media(min-width:800px) {
+      /*pc*/
+
+      #top>img {
+        position: relative;
+        width: 1024px;
+      }
+
+      /* ---------------------------------------------------------header */
+      header {
+        width: 1024px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 1s;
+      }
+
+      header:hover {
+        background-color: rgba(0, 0, 0, 0.533);
+
+      }
+
+      h1 {
+        float: left;
+      }
+
+      h1 a {
+        padding: 15px 20px 15px;
+        color: white;
+        text-decoration: none;
+        display: block;
+        font-size: 30px;
+        /* height: 30px; */
+        width: 150px;
+      }
+
+      /* ---------------------------------------------------------nav */
+      nav {
+        float: right;
+      }
+
+      ul#main>li {
+        float: left;
+        list-style: none;
+        position: relative;
+
+      }
+
+      ul#main>li>a {
+        text-align: center;
+        width: 80px;
+        height: 20px;
+        padding: 22px 5px 22px;
+        display: block;
+        font-size: 12px;
+        text-decoration: 0;
+        color: white;
+        font-size: bold;
+
+      }
+
+      ul#main>li:hover ul.sub {
+        height: 80px;
+      }
+
+      ul#main>li>a:hover {
+        color: rosybrown;
+      }
+
+      ul#main>li:hover ul.sub {
+        border-top: 3px solid rgb(255, 138, 66);
+        /* transition: all 1s; */
+      }
+
+      ul.sub {
+        transition: all 1s;
+        color: rgb(37, 37, 37);
+        text-align: center;
+        top: 70px;
+        left: 0;
+        position: absolute;
+        overflow: hidden;
+        height: 0;
+        border-top: 0px solid rgb(252, 97, 97);
+
+      }
+
+      ul.sub>li>a {
+
+        margin-left: 0;
+        font-size: 12px;
+        background-color: aliceblue;
+        display: block;
+        margin-left: 1px;
+        width: 90px;
+        height: 20px;
+        padding: 5px 0;
+      }
+
+
+
+      ul.sub>li>a:hover {
+        background-color: rgb(109, 95, 126);
+        transition: all 1s;
+      }
+
+    }
+
+    /* a태그는 폰트 사이즈가 상속되지 않는다!!! */
+  </style>
+</head>
+
+<body>
+  <!-- https://www.goobne.co.kr/brd/event/list 굽네
+  http://ruuzella.co.kr/ 루젤라
+  http://xinweifang.dwebs1.kr/page.php?p_id=guide1 신미방
+  http://xn--o39a52g22b168bkxj.com/page.php?p_id=business1내찜닭
+  로고로 홈/ 회사소개, 메뉴, 지점안내, 창업안내, 이벤트 -->
+  <div id="wrap">
+    <div id="top"><img src="gugsu.jpg" alt="국수" width="1024px"></div>
+    <div id="contentswrap">
+      <header>
+        <h1><a href=""> 애월국수</a> </h1>
+        <nav>
+          <ul id="main">
+            <li> <a href=""> 회사소개</a>
+              <ul class="sub">
+                <li><a>소개</a></li>
+                <li><a>소개2</a></li>
+              </ul>
+            </li>
+            <li> <a href=""> 메뉴</a></li>
+            <li> <a href=""> 지점안내</a></li>
+            <li> <a href=""> 창업안내</a></li>
+            <li> <a href=""> 이벤트</a></li>
+          </ul>
+          <div class="bar"><a href="http://">메뉴</a></div>
+        </nav>
+      </header>
+      <section>
+        섹션
+      </section>
+      <footer>
+        풋터
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

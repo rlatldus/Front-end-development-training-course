@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var myDog = {name:"리트리버", year:1, weight:"40kg"}
+        Object.defineProperty(myDog, "name",{//메서드
+            writable:false,
+            value:"Kim"
+        });//객체 못바꾸게 하기 위해 사용
+        // writable:false, 객체가 안바뀜, true면 바뀜
+
+        console.log(myDog);
+        myDog.name="fjkdjf"; //속성
+        myDog["name"]="cldhkdhk";
+        console.log(myDog);//메서드
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

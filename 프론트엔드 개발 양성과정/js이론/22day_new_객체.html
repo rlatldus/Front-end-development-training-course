@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //funxtion 으로 선언한 함수는 기본적으로 생성자함수의 기능을 가짐
+        // 새로 개체를 인스턴스 하면 //NOTE 초기화된다
+        function x(){}
+            console.log(new x());
+
+        function y(){
+            var a=" "; return alert(a);
+        }
+        var mem = new y(); // 시로운 객체 생성
+        console.log(mem);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

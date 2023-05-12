@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Menber(){
+            
+            Menber.prototype.person = "어린이"; //프로토타입으로 추가한 것은 삭제가 안됨
+        };
+
+
+        var mem1= new Menber();
+        var mem2= new Menber();
+
+        console.log(mem1.person + mem2.person);
+
+        mem2.person = "청소년";
+        console.log(mem1.person + mem2.person);
+
+        delete mem1.person; //존재하지 않으므로 삭제가 불가
+        delete mem2.person; //삭제 가능, 프로토타입에 같은 것 찾아서 표현
+        console.log(mem1.person + mem2.person);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

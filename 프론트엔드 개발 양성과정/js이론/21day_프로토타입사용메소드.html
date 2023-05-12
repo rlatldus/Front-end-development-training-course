@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function Person(first, last, age, gender, interests) {
+
+        //     // 속성과 메소드 정의
+        //     this.first = first;
+        //     this.last = last;
+        //     //...
+        // }
+        // var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+        // consol.log(person1.valueOf());
+
+        const Animal = function(){}
+        Animal.prototype ={
+            walk:function(){alert("dfdf");}
+        }
+        console.log(Animal.prototype);
+
+            const SuperAnumal = function(){}
+            SuperAnumal.prototype = {
+                walk:function(){alert("dfdfjkj");}
+            }
+        console.log(SuperAnumal.prototype);
+
+            const AA = function(){}
+            AA,prototype = new SuperAnumal(); // SuperAnumal객체 상속
+            AA.prototype = new Animal(); //Animal 객체 상속
+            const aa = new AA();
+            aa.walk(); 
+
+            const aaa = new AA();
+            aaa.walk();
+            aa.walk();
+            
+
+        // //object객체로 부터 상속받은 프로토타입메소드를 사용하여 프로퍼티를 추가
+        // const Dog = function(){Animal.call(this)}
+        // //Animal함수를 현재의 this로 불러온다
+        // //Animal에 담겨있는 프로퍼티를 불러온다
+        
+        // Dog.prototype = new Animal(); // Animal을 인스턴스화하여 Dog.prototype에 담음
+        // // Animal.prototype ={bark:function(){aler("dfdf");}} // 바꾸기
+        // Animal.prototype.bark=function(){alert("dfdf");} // 추가
+        // console.log(Animal.prototype);
+
+        // const Dogs =new Dog();
+        // Dogs.walk();
+        // Dogs.bark();
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

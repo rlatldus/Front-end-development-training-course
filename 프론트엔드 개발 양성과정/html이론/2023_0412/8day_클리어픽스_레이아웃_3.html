@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체 */
+        #wrap {
+            margin-left: 100px;
+            width: 1024px;
+            border: 3px solid black;
+        }
+
+        /* <!-- 헤더 --> */
+        header#header {
+            height: 300px;
+            background-color: rgb(225, 119, 119);
+        }
+
+        /* <!-- 푸터 --> */
+        footer#footer {
+            height: 300px;
+            background-color: rgb(179, 0, 255);
+        }
+
+                /* <!-- 본문 --> */
+                #contents {
+            background-color: antiquewhite;
+        }
+        #contents:after {clear: both; display: block; content: "";}
+        /* 블록으로 만들면 콘텐츠 안에 없어도 가능 */
+        div#cont1 {
+            /*1단*/
+            width: 512px;
+            height: 300px;
+            background-color: rgb(13, 255, 0);
+            float: left;
+        }
+
+        div#cont2 {
+            /*2단*/
+            width: 512px;
+            height: 300px;
+            background-color: rgb(204, 255, 0);
+            float: right;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- 전체 -->
+    <div id="wrap">
+        <!-- 헤더 -->
+        <header id="header">헤더</header>
+        <!-- 푸터 -->
+        <footer id="footer">푸터</footer>
+        <!-- 본문 -->
+        <div id="contents">
+            <div id="cont1">
+                <section>1단영역</section>
+            </div>
+            <div id="cont2">
+                <section>2단영역</section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
