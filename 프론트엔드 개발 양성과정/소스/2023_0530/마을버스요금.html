@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result{
+        min-height: 300px ;
+        margin-top: 10px;
+        background-color: antiquewhite;
+    }
+</style>
+<body>
+    <h1>마을버스 요금보기</h1>
+    <label>출발정거장<select id="start"></select></label>
+    <label>도착정거장<select id="end"></select></label>
+    <hr>
+    <!-- name 이 하나만 선택하게, label이 글 클릭해도 선택 되게 -->
+    <label><input type="radio" name="group" value="adult" checked/> 어른</label>
+    <label><input type="radio" name="group" value="young"/> 청소년</label>
+    <label><input type="radio" name="group" value="children"/> 어린이</label>
+    <hr>
+    
+    <button onclick="calculator()">버스요금보기</button>
+    <div id="result"></div>
+    <script src="bus.js"></script>
+</body>
+</html>
