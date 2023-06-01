@@ -1,0 +1,19 @@
+{
+  "program": {"name": "매일10분 영어"},
+  "title": {"name":"listening854. started it to~"},
+  "time": 600,
+  "pannel": [
+    {
+      "name": "jina Kim",
+      "debut": "june 1 2023"
+    },
+    {
+      "name": "Cristin Jon",
+      "debut": "May 10 2023"
+    },
+    {
+      "name": "Serina",
+      "debut": "March 20 2023"
+    }
+  ]
+}

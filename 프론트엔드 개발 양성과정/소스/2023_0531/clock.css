@@ -1,0 +1,36 @@
+
+      #clock {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        border: 20px solid rgb(225, 199, 152);
+        background: url(clock.png) no-repeat -33px -60px;
+      }
+      #lineHour {
+        position: absolute;
+        left: calc(50% - 5px);
+        top: calc(50% - 150px);
+        width: 10px;
+        height: 150px;
+        background-color: black;
+        transform-origin: bottom;
+      }
+      #lineMin {
+        position: absolute;
+        left: calc(50% - 2px);
+        top: calc(50% - 200px);
+        width: 4px;
+        height: 200px;
+        background-color: rgb(131, 131, 131);
+        transform-origin: bottom;
+      }
+      #lineSec {
+        position: absolute;
+        left: calc(50% - 1px);
+        top: calc(50% - 200px);
+        width: 2px;
+        height: 200px;
+        background-color: rgb(214, 214, 214);
+        transform-origin: bottom;
+      }

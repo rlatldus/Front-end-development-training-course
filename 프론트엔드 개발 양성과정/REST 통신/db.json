@@ -1,0 +1,82 @@
+{
+  "pannel": [
+    {
+      "id": 2,
+      "name": "Cristin Jon",
+      "debut": "May 10 2023",
+      "num": 2
+    },
+    {
+      "title": "easy easy easy English",
+      "author": "Kim siyeon",
+      "id": 3
+    },
+    {
+      "title": "easy English",
+      "author": "Kim",
+      "id": 4
+    },
+    {
+      "title": "easy English",
+      "author": "Kim",
+      "id": 5
+    },
+    {
+      "title": "easy English",
+      "author": "Kim",
+      "id": 6
+    },
+    {
+      "title": "easy English",
+      "author": "Kim",
+      "id": 7
+    },
+    {
+      "title": "easy English",
+      "author": "Kim",
+      "id": 8
+    }
+  ],
+  "time": [
+    {
+      "t": 600
+    }
+  ],
+  "program": [
+    {
+      "name": "매일10분 영어"
+    }
+  ],
+  "title": [
+    {
+      "id": 1,
+      "nameee": "listening854. started it to~",
+      "authorderer": "Kim"
+    },
+    {
+      "nameee": "listening854. started it to~",
+      "authorderer": "Kim",
+      "id": 2
+    },
+    {
+      "nameee": "listening854. started it to~",
+      "authorderer": "Kim",
+      "id": 3
+    },
+    {
+      "nameee": "listening854. started it to~",
+      "authorderer": "Kim",
+      "id": 4
+    },
+    {
+      "nameee": "listening854. started it to~",
+      "authorderer": "Kim",
+      "id": 5
+    },
+    {
+      "nameee": "listening854. started it to~",
+      "authorderer": "Kim",
+      "id": 6
+    }
+  ]
+}
